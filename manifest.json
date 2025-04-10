@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Sign Language Extension",
+  "version": "1.0",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": ["https://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "anulinkedin.jpg",
+      "48": "anulinkedin.jpg",
+      "128": "anulinkedin.jpg"
+    }
+  }
+}
